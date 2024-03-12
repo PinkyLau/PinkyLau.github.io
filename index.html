@@ -9,13 +9,267 @@
 
   gtag('config', 'G-VL9MKK476P');
 </script>
-    <title>gdfgdg</title>
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+          body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('bac_img.jpg'); /* Specify the path to your background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat; /* Prevent background image from repeating */
+            background-attachment: fixed; /* Fixed background position */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #a74ac7; /* Shinier purple color */
+            overflow: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+            border-radius: 10px; /* Add border-radius */
+            margin-top: 10px;
+            padding: 10px; /* Add padding to give space around the elements */
+            box-sizing: border-box; /* Include padding in the width */
+        }
+
+        /* Style for the h1 element */
+        .navbar h1 {
+            float: left; /* Float the heading to the left */
+            margin: 0; /* Remove default margin */
+            color: white; /* Text color */
+            font-size: 25px;
+            font-family: 'Segoe Script', sans-serif; /* Specify special font type */
+            text-shadow: 2px 2px 4px #000000; /* Add shadow */
+        }
+
+        /* Style for the links */
+        .navbar a {
+            float: right; /* Float the links to the right */
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        .navbar a:hover {
+            background-color: #000;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        /* Added style to make sure the website-name div does not overlap with the links */
+        .navbar:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+
+        .welcome-message {
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    border-radius: 20px; /* Rounded corners */
+    border: 4px solid #a74ac7; /* Border color */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Add shadow with increased blur and spread */
+    padding: 20px; /* Padding */
+    width: 80%; /* Adjust width */
+    margin: 50px auto; /* Center horizontally with top margin */
+    text-align: center; /* Center text */
+    position: relative;
+    color: #333; /* Text color */
+    text-shadow: 2px 2px 4px #fff; /* Text shadow */
+    transform: translateZ(20px); /* Apply 3D effect */
+}
+
+.welcome-message::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5)); /* Add reflection effect */
+    top: 0;
+    left: 0;
+    border-radius: 20px; /* Match border radius of the main div */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5); /* Box shadow reflection color with increased blur and spread */
+    transform: translateZ(20px); /* Apply 3D effect */
+}
+
+.paragraph-border {
+    border: 4px solid #a74ac7; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding */
+    margin: 20px auto; /* Center horizontally with top and bottom margin */
+    max-width: 80%; /* Limit maximum width */
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Add shadow with increased blur and spread */
+    transform: translateZ(20px); /* Apply 3D effect */
+}
+
+
+        .footer {
+            background-color: #a74ac7;/
+            color: white; /* Text color */
+            text-align: center; /* Center text */
+            padding: 20px; /* Padding */
+            width: 97.3%; /* Full width */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+
+        .footer a {
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underline */
+            margin: 0 10px; /* Add some space between links */
+        }
+
+        .footer a:hover {
+            color:#000000; /* Change color on hover */
+        }
+
+        
+        @keyframes spin {
+            100% {
+                transform: translateY(-50%) rotate(360deg); /* Rotate icon 360 degrees */
+            }
+        }
+
+        .form-container {
+            border: 2px solid #a74ac7; /* Border style */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Padding */
+            margin: 20px auto; /* Center horizontally with top and bottom margin */
+            max-width: 80%; /* Limit maximum width */
+            background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow with custom color */
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="tel"],
+        .form-container input[type="email"],
+        .form-container textarea {
+            width: 100%; /* Full width */
+            padding: 12px; /* Padding */
+            margin: 8px 0; /* Margin */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            border: 1px solid #ccc; /* Border color */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #a74ac7; /* Background color */
+            color: white; /* Text color */
+            padding: 14px 20px; /* Padding */
+            margin: 8px 0; /* Margin */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer; /* Cursor style */
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #800080; /* Darker background color on hover */
+        }
+
+        .form-container h3 {
+    text-align: center; /* Center align the text */
+    color:#333; /* Text color */
+    margin-bottom: 20px; /* Add space below the heading */
+    font-style: italic;
+    font-size: 26px;
+}
+
+    </style>
+    
+    <title>HomePage</title>
   </head>
   <body>
-    <h1><Index/h1>
-    <h2>testing for </h2>
-    <!-- Link to home.html -->
-    <a href="hi.html">Hi</a>
-       <a href="home.html">Home</a>
+  
+    <div class="navbar">
+        <h1>Carmen's Sweet Creation</h1>
+        <a class="active" href="homepage.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="dessert.html"><i class="fa fa-fw fa-birthday-cake"></i> Dessert</a>
+        <a href="about.html"><i class="fa fa-fw fa-globe"></i> About</a>
+    </div>
+
+
+    <div class="welcome-message">
+        <h2>Welcome to Carmen's Sweet Creations! <i class="fa fa-spinner fa-spin"></i></h2>
+        <p>Here you can indulge in the most delicious desserts crafted with love and passion. Explore our wide range of treats and satisfy your sweet cravings.</p>
+    </div>
+
+    <div class="paragraph-border">
+        <p>Welcome to Carmen's Sweet Creations! If you have a sweet tooth and a passion for all things dessert-related, then you've come to the perfect place. Our website is dedicated to the art and joy of baking, where we share delightful recipes, innovative techniques, and a love for creating delicious treats. Whether you're an experienced baker or a novice in the kitchen, there's something here for everyone to enjoy.</p>
+
+        <p>At Carmen's Sweet Creations, we believe that baking is not just about making desserts; it's a creative and rewarding experience that brings joy to both the baker and those who indulge in the final product. Our mission is to inspire and empower bakers of all levels to explore new flavors, techniques, and recipes, allowing them to unleash their inner pastry chef and create mouthwatering masterpieces.</p>
+
+        <p>But Carmen's Sweet Creations is more than just a collection of recipes; it's a community of passionate bakers who share a common love for all things sweet. Join us as we embark on a journey of exploration and discovery, where we exchange ideas, share tips and tricks, and celebrate our successes together. Whether you're looking for inspiration, seeking advice, or simply craving a delicious dessert, you'll find it all right here.</p>
+
+    </div>
+
+    <div class="form-container">
+        <center><h3>Leave a comment</h3></center>
+        <form action="#" method="post" onsubmit="return submitForm()">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+    
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number.." required>
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+    
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" placeholder="Write something.." style="height:100px" oninput="checkComment()" required></textarea>
+    <center>
+            <input type="submit" value="Submit" id="submitBtn" disabled>
+        </center>
+        </form>
+    </div>
+    
+    <script>
+        function checkComment() {
+            const comment = document.getElementById('comment').value.trim(); // Get the comment value and remove leading/trailing whitespaces
+            const submitBtn = document.getElementById('submitBtn'); // Get the submit button
+    
+            // Enable the submit button if the comment is not empty, otherwise disable it
+            if (comment !== '') {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+    
+        function submitForm() {
+            const comment = document.getElementById('comment').value.trim(); // Get the comment value and remove leading/trailing whitespaces
+    
+            // Check if the comment is empty
+            if (comment === '') {
+                alert("Please leave a comment.");
+                return false; // Prevent form submission
+            }
+    
+            alert("Thank you for your comment!");
+            return true; // Allow form submission
+        }
+    </script>
+    
+    <div class="footer">
+        <p>&copy; Carmen's Sweet Creations</p>
+        <p>Contact us:</p>
+        <a href="tel:+123456789"><i class="fa fa-phone"></i> Phone number</a>
+        <a href="mailto:info@carmenssweetcreations.com"><i class="fa fa-envelope"></i> Email</a>
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+        <p>Quick Links:</p>
+        <a href="homepage.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="dessert.html">Dessert</a>
+    </div>
   </body>
 </html>
