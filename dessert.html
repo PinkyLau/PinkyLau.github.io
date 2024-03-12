@@ -1,0 +1,292 @@
+<html>
+  <head>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VL9MKK476P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VL9MKK476P');
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('bac_img.jpg'); /* Specify the path to your background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat; /* Prevent background image from repeating */
+            background-attachment: fixed; /* Fixed background position */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #a74ac7; /* Shinier purple color */
+            overflow: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+            border-radius: 10px; /* Add border-radius */
+            margin-top: 10px;
+            padding: 10px; /* Add padding to give space around the elements */
+            box-sizing: border-box; /* Include padding in the width */
+        }
+
+        /* Style for the h1 element */
+        .navbar h1 {
+            float: left; /* Float the heading to the left */
+            margin: 0; /* Remove default margin */
+            color: white; /* Text color */
+            font-size: 25px;
+            font-family: 'Segoe Script', sans-serif; /* Specify special font type */
+            text-shadow: 2px 2px 4px #000000; /* Add shadow */
+        }
+
+        /* Style for the links */
+        .navbar a {
+            float: right; /* Float the links to the right */
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        .navbar a:hover {
+            background-color: #000;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        /* Added style to make sure the website-name div does not overlap with the links */
+        .navbar:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+
+        .paragraph-border {
+    border: 4px solid #a74ac7; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding */
+    margin: 20px auto; /* Center horizontally with top and bottom margin */
+    max-width: 80%; /* Limit maximum width */
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow with custom color */
+    transform: translateZ(20px); /* Apply 3D effect */
+}
+
+
+        .footer {
+            background-color: #a74ac7;/
+            color: white; /* Text color */
+            text-align: center; /* Center text */
+            padding: 20px; /* Padding */
+            width: 97.3%; /* Full width */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+
+        .footer a {
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underline */
+            margin: 0 10px; /* Add some space between links */
+        }
+
+        .footer a:hover {
+            color:#000000; /* Change color on hover */
+        }
+      
+        
+        .tiramisu-border {
+    border: 5px solid #000; /* Border style */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px; /* Add padding to account for border width */
+    text-align: center; /* Center align content */
+    display: inline-block; /* Ensure the container wraps around the content */
+    width: 15%; /* Set width to 25% */
+    box-sizing: border-box; /* Include border and padding in the element's total width and height */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    background-color: #f9f9f9; 
+    margin-top:-280px; 
+}
+
+.tiramisu-border img {
+    max-width: 100%; /* Allow the image to take up 100% of its container's width */
+    height: 19%; /* Maintain aspect ratio */
+}
+
+.tiramisu-border p {
+    margin: 10px 0 0; /* Margin for the text */
+    font-weight: bold; /* Make the text bold */
+    font-size: 24px;
+    font-style:italic;
+    color: blueviolet;
+}
+
+.cloud-shape {
+    background-color: #f0f0f0; /* Background color for the cloud */
+    padding: 20px; /* Padding to create space around the text */
+    border-radius: 20px; /* Rounded corners to make it look like a cloud */
+    width: fit-content; /* Set the width to fit the content */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+     margin-top:-20px; /* Center align horizontally */
+    text-align: center; /* Center align the text */
+}
+
+/* Style for the text inside the cloud */
+.cloud-text {
+    font-size: 24px; /* Adjust font size */
+    font-style: italic; /* Make it italic */
+    color: #333; /* Text color */
+}
+
+/* Style for the container */
+.container {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    height: 100vh; /* Set height to 100% of viewport height */
+    margin-top:-350px; 
+}
+
+.matcha-border {
+    border: 5px solid #000; /* Border style */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px; /* Add padding to account for border width */
+    text-align: center; /* Center align content */
+    display: inline-block; /* Ensure the container wraps around the content */
+    width: 25%; /* Set width to 15% */
+    box-sizing: border-box; /* Include border and padding in the element's total width and height */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    background-color: #f9f9f9; 
+    margin-top: -280px; 
+    height: 65%; /* Set the same height as the tiramisu-border */
+}
+
+.matcha-border img {
+    max-width: 100%; /* Allow the image to take up 100% of its container's width */
+    height:308px; /* Maintain aspect ratio */
+}
+
+.matcha-border p {
+    margin: 10px 0 0; /* Margin for the text */
+    font-weight: bold; /* Make the text bold */
+    font-size: 24px;
+    font-style: italic;
+    color: blueviolet;
+}
+
+.eggpudding-border {
+    border: 5px solid #000; /* Border style */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px; /* Add padding to account for border width */
+    text-align: center; /* Center align content */
+    display: inline-block; /* Ensure the container wraps around the content */
+    width: 25%; /* Set width to 15% */
+    box-sizing: border-box; /* Include border and padding in the element's total width and height */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    background-color: #f9f9f9; 
+    margin-top: -280px; 
+    height: 65%; /* Set the same height as the tiramisu-border */
+}
+
+.eggpudding-border img {
+    max-width: 100%; /* Allow the image to take up 100% of its container's width */
+    height:308px; /* Maintain aspect ratio */
+}
+
+.eggpudding-border p {
+    margin: 10px 0 0; /* Margin for the text */
+    font-weight: bold; /* Make the text bold */
+    font-size: 24px;
+    font-style: italic;
+    color: blueviolet;
+}
+
+ .tiramisu-border,
+    .matcha-border,
+    .eggpudding-border {
+        overflow: hidden; /* Hide overflowing content */
+        position: relative; /* Set position to relative for child elements */
+    }
+
+    .tiramisu-border img,
+    .matcha-border img,
+    .eggpudding-border img {
+        transition: transform 0.3s; /* Add transition for smoother animation */
+    }
+
+    /* Scale up the image when hovered */
+    .tiramisu-border:hover img,
+    .matcha-border:hover img,
+    .eggpudding-border:hover img {
+        transform: scale(1.1); /* Increase the scale */
+    }
+    </style>
+    
+      <title> 
+     DessertPage
+      </title>
+  </head>
+<body>
+  
+    <div class="navbar">
+        <h1>Carmen's Sweet Creation</h1>
+        <a class="active" href="homepage.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="#"><i class="fa fa-fw fa-birthday-cake"></i> Dessert</a>
+        <a href="about.html"><i class="fa fa-fw fa-globe"></i> About</a>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="container">
+        <div class="cloud-shape">
+            <p class="cloud-text">Enjoy my divine dessert, a blend of rich flavors. Follow my recipe for perfection!</p>
+        </div>
+        </div>
+        <center>
+        <div class="tiramisu-border">
+            <a href="tiramisu.html">
+                <p>Tiramisu Cake</p>
+                <br>
+                <img src="tiramisu.jpg" alt="Tiramisu Cake">
+            </a>
+        </div>
+        
+        <div class="matcha-border">
+            <a href="matcha.html">
+                <p>Matcha Cake</p>
+                <br>
+                <img src="matcha.jpg" alt="Matcha Cake">
+            </a>
+        </div>
+
+        <div class="eggpudding-border">
+            <a href="eggpudding.html">
+                <p>Egg Pudding</p>
+                <br>
+                <img src="eggpudding.jpg" alt="Egg Pudding">
+            </a>
+        </div>
+    </center>
+<br><br>
+    <div class="footer">
+        <p>&copy; Carmen's Sweet Creations</p>
+        <p>Contact us:</p>
+        <a href="tel:+123456789"><i class="fa fa-phone"></i> Phone number</a>
+        <a href="mailto:info@carmenssweetcreations.com"><i class="fa fa-envelope"></i> Email</a>
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+        <p>Quick Links:</p>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="dessert.html">Dessert</a>
+    </div>
+</body>
+</html>
