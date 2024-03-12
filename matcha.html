@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('bac_img.jpg'); /* Specify the path to your background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat; /* Prevent background image from repeating */
+            background-attachment: fixed; /* Fixed background position */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #a74ac7; /* Shinier purple color */
+            overflow: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+            border-radius: 10px; /* Add border-radius */
+            margin-top: 10px;
+            padding: 10px; /* Add padding to give space around the elements */
+            box-sizing: border-box; /* Include padding in the width */
+        }
+
+        /* Style for the h1 element */
+        .navbar h1 {
+            float: left; /* Float the heading to the left */
+            margin: 0; /* Remove default margin */
+            color: white; /* Text color */
+            font-size: 25px;
+            font-family: 'Segoe Script', sans-serif; /* Specify special font type */
+            text-shadow: 2px 2px 4px #000000; /* Add shadow */
+        }
+
+        /* Style for the links */
+        .navbar a {
+            float: right; /* Float the links to the right */
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        .navbar a:hover {
+            background-color: #000;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        /* Added style to make sure the website-name div does not overlap with the links */
+        .navbar:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+
+        .paragraph-border {
+    border: 4px solid #a74ac7; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding */
+    margin: 20px auto; /* Center horizontally with top and bottom margin */
+    max-width: 80%; /* Limit maximum width */
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow with custom color */
+    transform: translateZ(20px); /* Apply 3D effect */
+}
+
+
+        .footer {
+            background-color: #a74ac7;/
+            color: white; /* Text color */
+            text-align: center; /* Center text */
+            padding: 20px; /* Padding */
+            width: 97.3%; /* Full width */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+            margin-bottom: -47px;
+        }
+
+        .footer a {
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underline */
+            margin: 0 10px; /* Add some space between links */
+        }
+
+        .footer a:hover {
+            color:#000000; /* Change color on hover */
+        }
+
+        .recipe-border {
+    border: 5px solid #000; /* Border style */
+    border-radius: 60px; /* Rounded corners */
+    padding: 20px; /* Padding */
+    margin: 20px auto; /* Center horizontally with top and bottom margin */
+    max-width: 60%; /* Limit maximum width */
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow with custom color */
+    transform: translateZ(20px); /* Apply 3D effect */
+    text-align: center; /* Center align content */
+    display: inline-block; /* Ensure the container wraps around the content */
+    width: 50%;
+    height: 60%; /* Adjust width as needed */
+    box-sizing: border-box; /* Include border and padding in the element's total width and height */
+}
+
+
+.recipe-border img {
+    max-width: 50%; 
+    width: 40%;
+    height: 30%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.recipe-border h2 {
+    margin-top: 18px; /* Add space above headings */
+    text-align: left;
+    font-style:oblique;
+}
+
+.recipe-border ul,
+.recipe-border ol {
+    text-align: left; /* Align lists to the left */
+    margin-left: 40px; /* Add indentation for better readability */
+}
+
+
+.recipe-border h3 {
+    margin-top: 20px; /* Add space above headings */
+    font-size: 18px;
+    font-style: italic;
+    text-align: left;
+}
+        .save-button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Transition effect for background color */
+}
+
+.save-button:hover {
+    background-color: #45a049; /* Darker green background color on hover */
+}
+
+/* Style for the icon inside the button */
+.save-button i {
+    margin-right: 5px; /* Add space between icon and text */
+}
+
+.recipe-border h4 {
+    margin-bottom: 10px;
+    text-align: left; 
+    font-size: 14px;
+    font-style:normal;
+}
+
+.recipe-border h4:first-child {
+    font-style: italic; /* Make the first paragraph italic */
+}
+
+.recipe-border h4:last-child {
+    font-weight: bold; /* Make the last paragraph bold */
+}
+
+.back-button {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+.next-button {
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.next-button:hover {
+    background-color: #45a049;
+}
+.star-rating {
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .fa-star {
+        color: gray;
+        cursor: pointer;
+    }
+
+    .fa-star.checked {
+        color: gold;
+    }
+
+    #submitRateButton {
+        display: inline-block; /* Ensure the button is displayed inline */
+        margin-top: 10px; /* Add some space between the stars and the button */
+    }
+
+    .rate{
+        text-align: center;
+    }
+
+    #submitRateButton {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        padding: 10px 20px; /* Padding */
+        font-size: 16px; /* Font size */
+        border: none; /* No border */
+        cursor: pointer; /* Cursor style */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth background color transition */
+    }
+
+    #submitRateButton:hover {
+        background-color: #45a049; /* Darker green background on hover */
+    }
+    </style>
+</head>
+<body>
+    
+
+    <div class="navbar">
+        <h1>Carmen's Sweet Creation</h1>
+        <a class="active" href="homepage.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="#"><i class="fa fa-fw fa-birthday-cake"></i> Dessert</a>
+        <a href="about.html"><i class="fa fa-fw fa-globe"></i> About</a>
+    </div>
+    <br><br>
+    <center>
+        <div class="recipe-border">
+            <h3>Matcha Cake Recipe</h3>
+            <img src="matcha.jpg" alt="Matcha Cake">
+            <h2>Ingredients:</h2>
+            <h3>Matcha Sponge Cake</h3>
+            <ul>
+                <li>4 Eggs</li>
+                <li>60ml Whole milk (¼ cup)</li>
+                <li>45ml Vegetable oil (3 tbsp)</li>
+                <li>55g Cornstarch (⅓ cup 2 tbsp)</li>
+                <li>30g All purpose flour (⅓ cup)</li>
+                <li>2 tbsp Matcha powder</li>
+                <li>90g Granulated sugar (⅓ cup 2 tbsp) MATCH</li>
+                <!-- Add more ingredients as needed -->
+            </ul>
+            <br>
+            <h3>Matcha Cream</h3>
+            <ul>
+                <li>150g Granulated sugar (¾ cup)</li>
+                <li>2 tbsp Matcha powder</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <h3>Cotton Sponge Cake</h3>
+            <ul>
+                <li>Preheat the oven to 160°C fan forced</li>
+                <li>Line the bottom of a 8-inch cake tin with parchment paper</li>
+                <li>In a medium bowl whisk the egg yolks, milk, vegetable oil and cornstarch together</li>
+                <li> Sift in the flour and matcha powder, and whisk until just combined</li>
+               <li>In the bowl of a stand mixer fitted with a whisk attachment whip the egg whites with sugar until stiff peaks</li>
+               <li>In three additions fold the meringue into the egg yolk mixture, being careful not to deflate the bubbl</li> 
+               <li>Transfer the cake batter to the cake tin</li>
+               <li>Fill a larger baking tray with 1cm of boiling water and place the cake tin in the tray</li>
+               <li>Bake for 70 minutes, or until it springs back when touched</li>
+               <li>Cool on a cooling rack</li>
+               <li>Once cooled run a knife around the edge of the cake tin and invert the pan</li>
+               <li>Wrap in cling wrap and place in the fridge until assembly</li>
+            
+            <h3>Vanilla Whipped Cream</h3>
+            <li>Combine the cream and sugar in the bowl of a stand mixer fitted with a whisk attachment</li>
+            <li>Sift in the matcha powder and whisk until medium-stiff peaks.</li>   
+            <li>Reserve in the fridge until assembly</li>
+            </ul>
+        
+            <!-- Make Ahead and Freezing Instructions -->
+            <h2>Assembly:</h2>
+            <ul>
+            <li>Cut the cake into three equal layers</li> 
+            <li>Place a cake layer on a turn table and spread over a thin layer of cream</li>
+            <li>Top with another sheet of sponge</li>
+            <li>Repeat and cover with the final sponge layer</li> 
+            <li>Using an offset spatula cover the cake in a thin layer of cream, spinning the turntable as you go to create a smooth finis</li>
+            <li>Place the remaining cream in a piping bag fitted with a star tip and pipe a border around the edge of the cake</li>
+            <li>Dust with matcha powder and place in the fridge to set for 1-2 hours before enjoying</li> 
+        </ul>
+            <br> 
+            <h2>Example Video:</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/k0ZymxixVBA" frameborder="0" allowfullscreen></iframe>
+            <div class="quick-links">
+                <a href="https://www.youtube.com/watch?v=lhqbFm4U2NY" target="_blank">Another example video</a>
+            </div>
+            <div>
+                <center>
+                <p><i class="fa fa-clock-o"></i> Preparation time: 30 minutes</p>
+                <p><i class="fa fa-clock-o"></i> Total time: 1 hour 40minutes</p>
+                <p><i class="fa fa-clock-o"></i> Cook time: 70minutes</p>
+            </div>
+    
+            <br>
+            <div class="rate">
+           <p>If you like this recipe can rate here!</p>
+            <div class="star-rating" onclick="rateRecipe(event)">
+                <span class="fa fa-star" id="star1"></span>
+                <span class="fa fa-star" id="star2"></span>
+                <span class="fa fa-star" id="star3"></span>
+                <span class="fa fa-star" id="star4"></span>
+                <span class="fa fa-star" id="star5"></span>
+            </div><br>
+            <button id="submitRateButton" onclick="submitRate()">Submit Rate</button>
+            </div>
+        </div>
+    
+        <script>
+            // Function to save the recipe
+            function saveRecipe() {
+                // Implement saving functionality here
+                // You can redirect the user or perform any other action
+                alert("Recipe saved successfully!");
+            }
+</script>
+<script>
+    let starClicked = false; // Variable to track if a star has been clicked
+
+    // Function to rate the recipe
+    function rateRecipe(event) {
+        // Get the clicked star
+        const clickedStar = event.target;
+
+        // Get all stars
+        const allStars = document.querySelectorAll('.star-rating .fa-star');
+
+        // Toggle the color of stars up to the clicked star
+        allStars.forEach((star, index) => {
+            if (index <= Array.from(allStars).indexOf(clickedStar)) {
+                star.classList.add('checked'); // Add checked class to change color
+            } else {
+                star.classList.remove('checked'); // Remove checked class
+            }
+        });
+
+        // Set starClicked to true
+        starClicked = true;
+
+        // Enable the submit rate button
+        document.getElementById('submitRateButton').disabled = false;
+    }
+
+    // Function to submit the rate
+    function submitRate() {
+        // Check if a star has been clicked
+        if (!starClicked) {
+            alert("Please rate the recipe by clicking on the stars.");
+            return;
+        }
+
+        // Display a thank you message
+        alert("Thank you for rating the recipe!");
+
+        // Reset the star colors
+        const allStars = document.querySelectorAll('.star-rating .fa-star');
+        allStars.forEach(star => star.classList.remove('checked'));
+
+        // Reset starClicked to false
+        starClicked = false;
+
+        // Disable the submit rate button
+        document.getElementById('submitRateButton').disabled = true;
+    }
+</script>
+
+    
+    <a href="javascript:history.back()" class="back-button">&#8592; Back</a>
+    <a href="eggpudding.html" class="next-button">&#8594; Next</a>
+    <div class="footer">
+        <p>&copy; Carmen's Sweet Creations</p>
+        <p>Contact us:</p>
+        <a href="tel:+123456789"><i class="fa fa-phone"></i> Phone number</a>
+        <a href="mailto:info@carmenssweetcreations.com"><i class="fa fa-envelope"></i> Email</a>
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+        <p>Quick Links:</p>
+        <a href="homepage.html">Home</a>
+        <a href="bout.html">About</a>
+    </div>
+</body>
+</html>
